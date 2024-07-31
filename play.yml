@@ -1,0 +1,28 @@
+- hosts: locals
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: Debug var at play level
+      debug:
+        var: '{{ item }}'
+      loop:
+        - xxx
+        - yyy
+        - zzz
+      tags:
+        - xxx
+
+    - name: Import role
+      import_role:
+        name: test
+      tags:
+        - xxx
+
+#    - name: Include role
+#      include_role:
+#        name: test
+#        apply:
+#          tags:
+#            - xxx
+#      tags:
+#        - xxx

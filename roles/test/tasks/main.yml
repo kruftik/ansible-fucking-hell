@@ -1,0 +1,7 @@
+- name: Debug var at role level
+  debug:
+    var: '{{ item }}'
+  loop:
+    - xxx
+    - yyy
+    - zzz
